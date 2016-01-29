@@ -11,7 +11,7 @@ use App\Jobs\Search;
 class SearchController extends Controller
 {
     public function index(){
-        $term = env('search', null);
+        $term = env('SEARCH', null);
 
         if(!is_null($term)) {
             $job = (new Search($term))->onQueue('search');
