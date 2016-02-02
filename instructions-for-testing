@@ -1,0 +1,15 @@
+Here are the steps to run the code and test
+*********************************************
+
+1) clone the repo
+2) run it on Homestead
+3) connect with putty
+4) run this command: serve domain.com /home/vagrant/Code/path/public
+5) use the ip or domain name to connect
+6) go to the folder and run composer install
+7) copy the .env, rename and change QUEUE_DRIVER=sync to QUEUE_DRIVER=beanstalkd
+8) run the migration
+9) run the: php artisan key:generate command
+10) open the browser
+11) run: php artisan queue:listen --queue=search,write
+12) see the result in the database
